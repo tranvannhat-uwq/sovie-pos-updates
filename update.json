@@ -1,9 +1,9 @@
 {
     "schemaVersion":  1,
     "packageId":  "com.sovie.pos.android",
-    "versionName":  "1.6.12",
-    "versionCode":  19,
+    "versionName":  "1.6.13",
+    "versionCode":  20,
     "apkSize":  5844970,
-    "sha256":  "54c95b34eba7f532a0452bd923c6af440050ee1ea8d99e498749aa22f31e2d3e",
-    "notes":  "Sửa in hụt quảng cáo cuối hóa đơn: tăng giấy chừa để xé, giảm tốc gửi Bluetooth và chờ gửi hết dữ liệu cuối phiếu."
+    "sha256":  "e3814c35141c5140b3bcfc05194aa55c2b26223a3fbc562fc600834bc420b355",
+    "notes":  "Thêm Nợ nhà cung cấp riêng với Khách hàng: ghi nợ, trả từng phần hoặc trả hết, lịch sử và tổng nợ phải trả; tự ghi khoản Chi khi trả NCC, giữ dữ liệu cũ."
 }
