@@ -1,9 +1,9 @@
 {
     "schemaVersion":  1,
     "packageId":  "com.sovie.pos.android",
-    "versionName":  "1.6.9",
-    "versionCode":  16,
+    "versionName":  "1.6.10",
+    "versionCode":  17,
     "apkSize":  5844970,
-    "sha256":  "17d2f099ba0094851782532ffb22621e03e9d6a20bfdcb879b926f0a07dd488f",
-    "notes":  "Tùy chỉnh Truy cập nhanh: chọn chức năng, lưu riêng theo ngành và khôi phục mặc định."
+    "sha256":  "8f5ff8aeff0481ee50d54ce78f4846cd64baa75b69efcdc035dee939e2313343",
+    "notes":  "Thêm cài đặt Gợi ý bán hàng nhanh: thêm, sửa, xóa các gợi ý và lưu riêng theo từng ngành."
 }
