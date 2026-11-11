@@ -1,9 +1,9 @@
 {
     "schemaVersion":  1,
     "packageId":  "com.sovie.pos.android",
-    "versionName":  "1.6.7",
-    "versionCode":  14,
+    "versionName":  "1.6.8",
+    "versionCode":  15,
     "apkSize":  5840874,
-    "sha256":  "e3e6267ab157dc24c8d06f38c723e7b7850a289d746b32b3fac610ecd0f2c23d",
-    "notes":  "Thêm quảng cáo cuối hóa đơn: chủ quán tự nhập dịch vụ, số điện thoại, địa chỉ và lời nhắn. Hỗ trợ tiếng Việt trên K58/K80."
+    "sha256":  "a905dbe2e50265a1ed674aa21add66aa5503ccc7f9bae8b3681c305e90482efc",
+    "notes":  "Hóa đơn gọn hơn: gộp dòng mặt hàng, giữ đơn giá cho số lượng lớn hơn 1, giảm khoảng cách và kích thước QR. Hiển thị rõ trạng thái quảng cáo."
 }
