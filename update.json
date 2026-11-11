@@ -1,9 +1,9 @@
 {
     "schemaVersion":  1,
     "packageId":  "com.sovie.pos.android",
-    "versionName":  "1.6.8",
-    "versionCode":  15,
-    "apkSize":  5840874,
-    "sha256":  "a905dbe2e50265a1ed674aa21add66aa5503ccc7f9bae8b3681c305e90482efc",
-    "notes":  "Hóa đơn gọn hơn: gộp dòng mặt hàng, giữ đơn giá cho số lượng lớn hơn 1, giảm khoảng cách và kích thước QR. Hiển thị rõ trạng thái quảng cáo."
+    "versionName":  "1.6.9",
+    "versionCode":  16,
+    "apkSize":  5844970,
+    "sha256":  "17d2f099ba0094851782532ffb22621e03e9d6a20bfdcb879b926f0a07dd488f",
+    "notes":  "Tùy chỉnh Truy cập nhanh: chọn chức năng, lưu riêng theo ngành và khôi phục mặc định."
 }
