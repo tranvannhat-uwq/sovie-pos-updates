@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag, for example v1.6.5
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -17,20 +23,22 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
     steps:
       - name: Verify signed artifact and publish
         shell: bash
         run: |
-          git clone --quiet --depth 1 --branch "$GITHUB_REF_NAME" "https://github.com/$GITHUB_REPOSITORY.git" release-input
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          git clone --quiet --depth 1 --branch "$RELEASE_TAG" "https://github.com/$GITHUB_REPOSITORY.git" release-input
           cd release-input
           version=$(jq -er '.versionName' update.json)
           version_code=$(jq -er '.versionCode' update.json)
-          test "$GITHUB_REF_NAME" = "v$version"
+          test "$RELEASE_TAG" = "v$version"
           test "$(jq -er '.packageId' update.json)" = 'com.sovie.pos.android'
           test "$(stat -c '%s' SoVie-POS-Android.apk)" = "$(jq -er '.apkSize' update.json)"
           printf '%s  SoVie-POS-Android.apk\n' "$(jq -er '.sha256' update.json)" | sha256sum --check --strict
 
-          current=$(gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft 2>/dev/null || true)
+          current=$(gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft 2>/dev/null || true)
           if [ "$current" = 'false' ]; then
             echo 'This release has already been published.'
             exit 0
@@ -39,8 +47,8 @@ jobs:
             test "$version_code" -gt "$(jq -er '.versionCode' <<< "$latest")"
           fi
           if [ "$current" != 'true' ]; then
-            gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --verify-tag --draft \
+            gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --verify-tag --draft \
               --title "SoVie POS $version" --notes "$(jq -r '.notes' update.json)"
           fi
-          gh release upload "$GITHUB_REF_NAME" SoVie-POS-Android.apk update.json --repo "$GITHUB_REPOSITORY" --clobber
-          gh release edit "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+          gh release upload "$RELEASE_TAG" SoVie-POS-Android.apk update.json --repo "$GITHUB_REPOSITORY" --clobber
+          gh release edit "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest

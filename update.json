@@ -1,9 +1,9 @@
 {
-  "schemaVersion": 1,
-  "packageId": "com.sovie.pos.android",
-  "versionName": "1.6.5",
-  "versionCode": 12,
-  "apkSize": 5840874,
-  "sha256": "50268483db3e3baca7a1f2b5b3dc7cfd1921d7a2e6510e70eb96f340784ac93b",
-  "notes": "Thêm kiểm tra và tải cập nhật ngay trong ứng dụng. Có thể tiếp tục bán hàng khi tải gói."
+    "schemaVersion":  1,
+    "packageId":  "com.sovie.pos.android",
+    "versionName":  "1.6.6",
+    "versionCode":  13,
+    "apkSize":  5840874,
+    "sha256":  "04c1763741d2b97df5996d4c4b791aa1d0f5e5a67b8a275e1db5103db50e231a",
+    "notes":  "Sửa in Bluetooth tiếng Việt có dấu trên khổ K58 và K80. Bổ sung phiếu in thử tiếng Việt."
 }
