@@ -1,9 +1,9 @@
 {
     "schemaVersion":  1,
     "packageId":  "com.sovie.pos.android",
-    "versionName":  "1.6.11",
-    "versionCode":  18,
+    "versionName":  "1.6.12",
+    "versionCode":  19,
     "apkSize":  5844970,
-    "sha256":  "4d9922cf39ae36fba561e765e15c76eac279c75b4bec021406c53813ac196fe1",
-    "notes":  "Thêm đường kẻ nhạt giữa từng mục hóa đơn trên bản xem trước, in PDF và máy in nhiệt K58/K80."
+    "sha256":  "54c95b34eba7f532a0452bd923c6af440050ee1ea8d99e498749aa22f31e2d3e",
+    "notes":  "Sửa in hụt quảng cáo cuối hóa đơn: tăng giấy chừa để xé, giảm tốc gửi Bluetooth và chờ gửi hết dữ liệu cuối phiếu."
 }
