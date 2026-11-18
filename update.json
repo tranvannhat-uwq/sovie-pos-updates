@@ -1,9 +1,9 @@
 {
     "schemaVersion":  1,
     "packageId":  "com.sovie.pos.android",
-    "versionName":  "1.6.13",
-    "versionCode":  20,
-    "apkSize":  5844970,
-    "sha256":  "e3814c35141c5140b3bcfc05194aa55c2b26223a3fbc562fc600834bc420b355",
-    "notes":  "Thêm Nợ nhà cung cấp riêng với Khách hàng: ghi nợ, trả từng phần hoặc trả hết, lịch sử và tổng nợ phải trả; tự ghi khoản Chi khi trả NCC, giữ dữ liệu cũ."
+    "versionName":  "1.6.14",
+    "versionCode":  21,
+    "apkSize":  5849066,
+    "sha256":  "4dfecab03a7625a4f11d68b6be108813386773f77fef164edab15e1fb2da96d5",
+    "notes":  "Thêm Sổ quỹ: chốt số dư thực tế làm mốc mới, phiếu cũ không cộng trừ lại; phiếu mới tự cập nhật quỹ. Có lịch sử điều chỉnh và số dư đầu/cuối kỳ; kiểm tra các luồng bán hàng, thu nợ và trả NCC."
 }
